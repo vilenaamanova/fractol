@@ -9,6 +9,8 @@ SRCS	=	main.c \
 			init.c \
 			keyboard_control.c \
 			mouse_control.c \
+			draw_fractal.c \
+			parse.c \
 
 LIBFT	=	./libft/libft.a
 
@@ -34,7 +36,7 @@ $(NAME)	:	$(OBJ) $(HEADER)
 	$(CC)	$(CFLAGS) -c $< -o $@
 
 clean	:
-	@rm -f $(OBJ)
+	@rm -rf $(OBJ)
 	@$(MAKE) clean -C ./libft
 
 fclean	:	clean
