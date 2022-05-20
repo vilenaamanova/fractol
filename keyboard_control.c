@@ -6,7 +6,7 @@
 /*   By: ncathy <ncathy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:12:38 by ncathy            #+#    #+#             */
-/*   Updated: 2022/05/19 19:30:02 by ncathy           ###   ########.fr       */
+/*   Updated: 2022/05/20 19:38:05 by ncathy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ int	move_fractal(int key, t_fractol *fractol)
 	}
 	else if (key == 125)
 	{
-		fractol->min_y += fractol->shift_y * 0.05;
-		fractol->max_y += fractol->shift_y * 0.05;
+		fractol->min_y -= fractol->shift_y * 0.05;
+		fractol->max_y -= fractol->shift_y * 0.05;
 	}
 	else if (key == 126)
 	{
-		fractol->min_y -= fractol->shift_y * 0.05;
-		fractol->max_y -= fractol->shift_y * 0.05;
+		fractol->min_y += fractol->shift_y * 0.05;
+		fractol->max_y += fractol->shift_y * 0.05;
 	}
 	return (0);
 }

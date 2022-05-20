@@ -18,11 +18,11 @@ HEADER	=	fractol.h
 
 OBJ		=	$(patsubst %.c, %.o, $(SRCS))
 
-CC		=	gcc
+CC		=	gcc -Ofast
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-MLX		=	-lmlx -framework OpenGL -framework AppKit
+MLX		=	-lmlx -framework OpenGL -framework AppKit -g -lmlx
 
 .PHONY	:	all clean fclean re
 
